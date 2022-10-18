@@ -1,4 +1,4 @@
-# Setup New Ubuntu server with nginx
+# Configure new Ubuntu server with Nginx
 
 exec { 'update system':
         command => '/usr/bin/apt-get update',
