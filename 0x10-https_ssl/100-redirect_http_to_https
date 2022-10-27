@@ -37,7 +37,7 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-listen debugulize.tech
+listen emukus.tech
         bind :80
         mode http
         balance roundrobin
@@ -51,7 +51,7 @@ frontend www-http
         redirect scheme https code 301 if !{ ssl_fc }
 
 frontend www-https
-        bind :443 ssl crt /etc/letsencrypt/live/www.debugulize.tech/haproxy.pem
+        bind :443 ssl crt /etc/letsencrypt/live/www.emukus.tech/haproxy.pem
         http-request add-header X-Forwarded-Proto https
         default_backend www-backend
 
@@ -104,7 +104,7 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-listen debugulize.tech
+listen emukus.tech
         bind :80
         mode http
         balance roundrobin
@@ -118,7 +118,7 @@ frontend www-http
         redirect scheme https code 301 if !{ ssl_fc }
 
 frontend www-https
-        bind :443 ssl crt /etc/letsencrypt/live/www.debugulize.tech/haproxy.pem
+        bind :443 ssl crt /etc/letsencrypt/live/www.emukus.tech/haproxy.pem
         http-request add-header X-Forwarded-Proto https
         default_backend www-backend
         reqadd X-Forwarded-Proto:\ https
