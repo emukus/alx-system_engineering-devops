@@ -8,6 +8,6 @@ exec {'Increase nginx limit':
 
 # Restart Nginx
 exec { 'nginx-restart':
-  command => 'ngix restart',
-  path    => '/etc/init.d'
+  command => 'nginx restart',
+  path    => '/etc/init.d/'
 }
